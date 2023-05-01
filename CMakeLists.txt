@@ -13,6 +13,7 @@ add_framework(JavaNativeFoundation
 	FAT
 	CURRENT_VERSION
 	PARENT "JavaVM"
+	PARENT_COMPONENT cli_gui_common
 	VERSION "A"
 
 	SOURCES
