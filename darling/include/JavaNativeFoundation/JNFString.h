@@ -1,0 +1,1 @@
+../../../apple/JavaNativeFoundation/JavaNativeFoundation/JNFString.h
