@@ -1,0 +1,1 @@
+../../../apple/JavaNativeFoundation/JavaNativeFoundation/JNFJObjectWrapper.h

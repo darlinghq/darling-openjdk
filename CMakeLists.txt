@@ -1,7 +1,16 @@
 project(openjdk)
 
+remove_sdk_framework(JavaNativeFoundation)
+
 set(DYLIB_COMPAT_VERSION "1.0.0")
 set(DYLIB_CURRENT_VERSION "1.0.0")
+
+set(FRAMEWORK_VERSION "A")
+
+generate_sdk_framework(JavaNativeFoundation
+    VERSION ${FRAMEWORK_VERSION}
+    HEADER "darling/include/JavaNativeFoundation"
+)
 
 include_directories(
 	"${CMAKE_CURRENT_SOURCE_DIR}/src/java.base/share/native/include"
@@ -14,7 +23,7 @@ add_framework(JavaNativeFoundation
 	CURRENT_VERSION
 	PARENT "JavaVM"
 	PARENT_COMPONENT cli_gui_common
-	VERSION "A"
+	VERSION ${FRAMEWORK_VERSION}
 
 	SOURCES
 		apple/JavaNativeFoundation/JavaNativeFoundation/debug.m
